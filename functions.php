@@ -67,7 +67,7 @@ function medical_praxis_widgets_init() {
         'name' => __( 'our-team', 'theme-slug' ),
         'id' => '-our-team',
         'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
-        'before_widget' => '<div id="%1$s" class=" grid_4 widget %2$s">',
+        'before_widget' => '<div id="%1$s" class=" grid_12 widget %2$s">',
 	      'after_widget'  => '</div>',
 	       'before_title'  => '<h3 class="widgettitle">',
 	        'after_title'   => '</h3>',

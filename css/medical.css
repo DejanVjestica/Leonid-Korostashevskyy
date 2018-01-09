@@ -1,0 +1,283 @@
+
+/* ----------------Font Awsome-------------------- */
+.fa{
+  font-size: 4em;
+  color:#a3dedc;
+}
+.fa-check-square{
+  font-size: 100%;
+}
+/* ----------------Algemeine classe-------------------- */
+body{
+  text-align: left;
+}
+a{
+    text-decoration: none;
+
+}
+a:hover{
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+/* ================= custom classes*/
+
+.margin-top{
+  margin-top: 50px;
+}
+.margin-top-150px{
+  margin-top: 150px;
+}
+.margin-bottom{
+  margin-bottom: 50px;
+}
+.margin-bottom-30{
+  margin-bottom: 30px;
+}
+.border-bottom{
+  border-bottom: 1px solid darkgrey;
+}
+
+.font-3em{
+  font-size: 3em;
+}
+.text-center{
+  text-align: center;
+}
+.padding-100{
+  padding: 100px 0;
+}
+/* ----------------  Sections, Widgets ------------------- */
+
+
+.section {
+  padding: 50px 0 100px;
+
+}
+body div h2{
+  /*margin-bottom: 40px;*/
+
+}
+
+.widget img{
+  margin-bottom: 10px;
+  /*order: 1;*/
+}
+.widget h3{
+    display: none;
+
+}
+
+/* ==================================================
+header.php
+========================================= */
+
+/* --------------------navbar---------------------- */
+#nav-bar{
+  background-color: #029cac;
+  color: white;
+}
+#nav-bar a{
+  color: white;
+
+}
+
+/* ------------------logo----------------- */
+#logo{
+  margin: 20px 0;
+}
+#logo h2{
+    margin-bottom: 0;
+}
+/* ------------------impressum link zur Startseite----------------- */
+#zuruck{
+    padding: 5px;
+
+
+    background-color: lightgrey;
+    margin-top: 20px;
+}
+#zuruck:hover{
+    background-color: grey;
+}
+#zuruck:hover h4{
+    background-color: grey;
+    color: white;
+}
+
+#zuruck h4{
+    color: black;
+    margin: 0;
+    text-align: center;
+    font-size: 1em;
+
+}
+/* -----------------menu------- */
+#menu-haupt{
+margin: 0;
+margin-top: 20px;
+text-align: right;
+}
+#menu-haupt li {
+  margin: 0;
+
+  display: inline-block;
+}
+#menu-haupt li.current-menu-item{
+}
+#menu-haupt a{
+font-size: 1.3em;
+padding:5px 15px;
+display: inline-block;
+}
+#menu-haupt li:hover{
+}
+#menu-haupt li.current-menu-item a, #menu-haupt li a:hover{
+  background-color: #029cac;
+}
+
+/* ----------------banner----------------- */
+#banner{
+  height: 450px;
+  background-size: cover;
+}
+#banner h1{
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+#banner h2{
+    font-size: 1.6em;
+}
+#banner button{
+  background-color: #029cac;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+.banner-msg{
+  color: white;
+  background-color: #029cac;
+  margin-top: 160px;
+  opacity: 0.8;
+}
+
+/* ------------------------Banner info------------------------------- */
+#info{
+    background-color: #029cac;
+    padding-top: 20px;
+    color: white;
+}
+#info .fa, h3{
+    color: white;
+}
+#info p{
+  margin-bottom: 3px;
+}
+#info .grid_3{
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
+#info .fa{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* ==========================================
+Section Willkommen
+=============================================
+*/
+#willkommen .grid_12{
+    margin-left: 0;
+}
+
+/* ==========================================
+Section Unser-Team
+=============================================
+*/
+#our-team{
+    text-align: left;
+    background-color: #f0f0f0;
+}
+#our-team .widget{
+    background-color: #fff;
+}
+#our-team #text-8{
+    width: 70%;
+    background-color: transparent;
+    padding-bottom: 20px;
+}
+#our-team .widget_sp_image-description{
+    padding: 10px;
+}
+#our-team img{
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+Section Praxis
+=============================================
+*/
+#praxis{
+  /*background-color: #f0f0f0;*/
+}
+#praxis img{
+    max-height: 200px;
+}
+/* ==========================================
+Section Leistungen
+=============================================
+*/
+#leistungen{
+    background-color: #f0f0f0;
+}
+#leistungen ul{
+    font-size: 1.2em;
+    column-count: 2;
+    line-height: 2;
+
+}
+#leistungen li{
+    margin-right: 15px;
+}
+#leistungen .fa-check-square{
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+/* ==========================================
+Seite Impressum
+=============================================
+*/
+#impressum{}
+#impressum .grid_12{
+    margin-left: 0;
+    margin-top: 50px;
+}
+
+/* ==========================================
+Footer-bereich
+=============================================
+*/
+footer{
+    background-color: #029cac;
+    width: 100%;
+}
+footer li {
+  margin: 0;
+  /*list-style: none;*/
+  display: inline-block;
+}
+footer a{
+    color: white;
+    font-size: 1.3em;
+    padding:5px 15px;
+    display: inline-block;
+    /*list-style: none;*/
+}
+.menu-footer-menu-container{
+    /*margin-top: 20px;*/
+}
+footer .menu{
+    margin: 0;
+}

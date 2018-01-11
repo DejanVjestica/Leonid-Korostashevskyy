@@ -1,0 +1,177 @@
+/* My Styles */
+body{
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: black;
+
+  margin: 0;
+  display: inline-block;
+}
+article, aside, footer, header, hgroup, main, nav, section, div {
+    display: inline-block;
+}
+img{
+  height: auto;
+}
+a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+ul{
+  text-decoration: none;
+  list-style-type: none;
+}
+p, div{
+  line-height: 160%;
+}
+h1{
+  font-size: 1.5em;
+}
+h2{
+  font-size: 1.2em;
+}
+/* header.php */
+/* header  */
+header{
+
+}
+/* haupt navigation */
+#navbar{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: #029cac;
+  width: 90%;
+  padding: 0 5%;
+}
+#navbar a{
+  color: white;
+
+}
+#navbar h2{
+  /* text-align: center; */
+  margin-top: 10px;
+}
+/* desktop menu */
+#hauptmenu{
+  display: none;
+}
+
+/* responcive menu */
+#hauptmenu-resp{
+  width: 100%;
+}
+#hauptmenu-resp li{
+  text-align: right;
+}
+#hauptmenu-resp .menu-haupt-container{
+  float: right;
+  display: none;
+  margin-top: 15px;
+  line-height: 300%;
+}
+#hauptmenu-resp #menu-haupt-1{
+margin-top: 0;
+padding: 0;
+}
+
+/* w3school menu icon */
+.container {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 5%;
+
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    display: block;
+}
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+/* banner */
+#banner{
+  width: 100%;
+  height: 441px;
+  background-size: cover;
+  margin-top: 66px;
+}
+.banner-msg{
+  width: 80%;
+  margin: 85% 5% 0;
+  padding: 5%;
+  background-color: #029cac;
+  color:white;
+}
+.banner-msg h1{
+  margin: 0;
+}
+.banner-msg h2{
+  margin-top: 7px;
+}
+/* info bereich */
+#info {
+ background-color:  #029cac;
+ color: white;
+ padding: 5%;
+}
+#info .widget-box{
+  /* float: right;
+  width: 50%; */
+}
+#info .widget-box h3{
+  margin-top: 6px;
+}
+#google-map{
+  width: 100%;
+}
+#google-map iframe{
+  margin-bottom: -8px;
+}
+/* FontAwesome */
+i {
+  float: left;
+  margin-right: 5%;
+}
+/* index.php  */
+#willkommen, #our-team, #praxis, #leistungen{
+  margin-bottom: 5%;
+  padding: 5%;
+}
+#our-team h2, #praxis h2, #leistungen h2 {
+  margin-top: 6px;
+}
+/* widget images attached image medium */
+.attachment-medium{
+  width: 100%;
+  height: auto;
+}
+/* footer  */
+footer {
+  width: 90%;
+  background-color:  #029cac;
+  padding: 0 5%;
+}
+#footer-menu{
+  float: right;
+}
+footer a{
+  color: white;
+}

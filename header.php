@@ -14,31 +14,37 @@
 
 <!-- ================================================ Header.php ============================================ -->
 <header>
+  <?php if ( is_front_page()):?>
+    <!-- ========== Navigation-Bar - hier kommt: der Hauptmenu ============================= -->
+    <section id="navbar" class="">
+      <a id="logo" class="menu" href="<?php bloginfo('url'); ?>"><h2>Leonid Korostashevskyy</h2></a>
+      <!-- es wird nun zeigen wann <700px -->
+      <nav id="hauptmenu" class="menu ">
+        <?php wp_nav_menu(array('theme_location'=>'haupt')); ?>
+      </nav>
+      <!-- menu icon -->
+      <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <!-- es wird nun zeigen wann >700px -->
+      <nav id="hauptmenu-resp" class="menu display">
+        <?php wp_nav_menu(array('theme_location'=>'haupt')); ?>
+      </nav>
+    </section>
 
-    <?php if ( is_front_page()):?>
-        <!-- ========== Navigation-Bar - hier kommt: der Hauptmenu ============================= -->
-        <div id="nav-bar">
-            <div class="container_12">
-                <a id="logo" class="menu grid_6" href="<?php bloginfo('url'); ?>"><h2>Leonid Korostashevskyy</h2></a>
-                <div class="menu grid_6">
-                    <?php wp_nav_menu(array('theme_location'=>'haupt')); ?>
-                </div>
-            </div>
+    <!-- ========== Banner - hier kommt: das Headerbild, und die Visitenkarte ============ -->
+    <div id="banner" style="background-image: url(<?php echo get_background_image(); ?>);">
+        <div class="banner-msg">
+          <?php dynamic_sidebar( 'header-msg'); ?>
         </div>
-
-        <!-- ========== Banner - hier kommt: das Headerbild, und die Visitenkarte ============ -->
-        <div id="banner" style="background-image: url(<?php echo get_background_image(); ?>);">
-            <div class="container_12">
-                <div class="banner-msg  margin-top grid_7 push_5">
-                    <?php dynamic_sidebar( 'header-msg'); ?>
-                </div>
-            </div>
-        </div>
+    </div>
 
         <!-- ========Info - hier kommt: die Adresse, der Öfnungszeiten, und die Google map
         Beiträge im kategorien 3 und Google map ist Hardcoded ================-->
         <div id="info" class="">
-            <div class="container_12">
+            <div class="info">
                 <?php query_posts('cat=3'); ?>
                 <?php if ( have_posts() ) : ?>
                     <?php while ( have_posts() ) : the_post(); ?>
@@ -47,19 +53,30 @@
                     <?php endwhile; ?>
                 <?php endif; ?>
                 <!-- <i class="fa fa-map-marker grid_1" aria-hidden="true"></i> -->
-                <div class="grid_5">
+                <div id="google-map" class="">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1214.5325463197173!2d13.50934436621146!3d52.496061288537085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ed1868fe6d7%3A0x2dd447922f8250c1!2sLeonid+Korostashevskyy!5e0!3m2!1sen!2sde!4v1481898796345" width="100%" height="auto" frameborder="0"  style="o" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
 
     <?php elseif ( is_page(2)):?>
-        <div id="nav-bar">
-            <div class="container_12">
-                <a id="logo" class="menu grid_6" href="<?php bloginfo('url'); ?>"><h2>Leonid Korostashevskyy</h2></a>
-                <a id="zuruck" class="grid_3 push_3" href="<?php bloginfo('url'); ?>"><h4>zurück zur Startseite</h4></a>
-            </div>
+      <section id="navbar" class="">
+        <a id="logo" class="menu" href="<?php bloginfo('url'); ?>"><h2>Leonid Korostashevskyy</h2></a>
+        <!-- es wird nun zeigen wann <700px -->
+        <nav id="hauptmenu" class="menu ">
+          <?php wp_nav_menu(array('theme_location'=>'haupt')); ?>
+        </nav>
+        <!-- menu icon -->
+        <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
         </div>
+        <!-- es wird nun zeigen wann >700px -->
+        <nav id="hauptmenu-resp" class="menu display">
+          <?php wp_nav_menu(array('theme_location'=>'haupt')); ?>
+        </nav>
+      </section>
     <?php endif; ?>
 
 </header>

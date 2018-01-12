@@ -2,12 +2,12 @@
 body{
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: black;
-
+  width: 100%;
   margin: 0;
   display: inline-block;
 }
 article, aside, footer, header, hgroup, main, nav, section, div {
-    display: inline-block;
+
 }
 img{
   height: auto;
@@ -22,119 +22,123 @@ ul{
   list-style-type: none;
 }
 p, div{
-  line-height: 160%;
+  /* line-height: 160%; */
 }
 h1{
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 h2{
+  font-size: 1.4em;
+}
+h3{
   font-size: 1.2em;
+}
+/* FontAwesome */
+i {
+  float: left;
+  margin-right: 5%;
+}
+.clear{
+  clear: both;
+}
+/* wrapper */
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
 }
 /* header.php */
 /* header  */
 header{
-
-}
-/* haupt navigation */
-#navbar{
+  width: 100%;
+  height: 80px;
   position: fixed;
-  z-index: 1;
   top: 0;
+  z-index: 1;
   background-color: #029cac;
-  width: 90%;
-  padding: 0 5%;
 }
-#navbar a{
+header a{
   color: white;
-
 }
-#navbar h2{
-  /* text-align: center; */
-  margin-top: 10px;
+#logo h2{
+  margin: 29px 0;
 }
 /* desktop menu */
 #hauptmenu{
   display: none;
 }
-
 /* responcive menu */
 #hauptmenu-resp{
-  width: 100%;
-}
-#hauptmenu-resp li{
-  text-align: right;
 }
 #hauptmenu-resp .menu-haupt-container{
   float: right;
   display: none;
-  margin-top: 15px;
   line-height: 300%;
+  background-color: #029cac;
+  padding: 0 5%;
+  position: relative;
+  right: 0;
 }
-#hauptmenu-resp #menu-haupt-1{
-margin-top: 0;
-padding: 0;
+#menu-haupt-1{
+  padding-left: 0;
 }
-
+#hauptmenu-resp menu-item{
+  text-align: right;
+}
 /* w3school menu icon */
 .container {
   display: inline-block;
   cursor: pointer;
-  position: fixed;
-  top: 10px;
-  right: 5%;
-
+  position: absolute;
+  top: 20px;
+  right:5%;
 }
 .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
-    display: block;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 /* Rotate first bar */
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
 }
 /* Fade out the second bar */
 .change .bar2 {
-    opacity: 0;
+  opacity: 0;
 }
 /* Rotate last bar */
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
 }
 /* banner */
 #banner{
   width: 100%;
   height: 441px;
   background-size: cover;
-  margin-top: 66px;
+  margin-top: 80px;
+  position: relative;
 }
 .banner-msg{
-  width: 80%;
-  margin: 85% 5% 0;
-  padding: 5%;
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  margin: 0 5%;
+  padding: 0 5%;
   background-color: #029cac;
   color:white;
-}
-.banner-msg h1{
-  margin: 0;
 }
 .banner-msg h2{
   margin-top: 7px;
 }
 /* info bereich */
 #info {
- background-color:  #029cac;
- color: white;
- padding: 5%;
-}
-#info .widget-box{
-  /* float: right;
-  width: 50%; */
+  background-color:  #029cac;
+  color: white;
+  padding: 5% 0;
+
 }
 #info .widget-box h3{
   margin-top: 6px;
@@ -143,29 +147,28 @@ padding: 0;
   width: 100%;
 }
 #google-map iframe{
-  margin-bottom: -8px;
-}
-/* FontAwesome */
-i {
-  float: left;
-  margin-right: 5%;
+  /* margin-bottom: -8px; */
 }
 /* index.php  */
-#willkommen, #our-team, #praxis, #leistungen{
-  margin-bottom: 5%;
-  padding: 5%;
-}
-#our-team h2, #praxis h2, #leistungen h2 {
-  margin-top: 6px;
+#willkommen, #our-team, #praxis, #leistungen {
+  margin-bottom: 3em;
+  margin-top: 2em;
 }
 /* widget images attached image medium */
 .attachment-medium{
   width: 100%;
   height: auto;
 }
+#leistungen .fa-li{
+/* padding-bottom: 1em; */
+}
+#leistungen p{
+  display: none;
+}
 /* footer  */
 footer {
   width: 90%;
+  height: 60px;
   background-color:  #029cac;
   padding: 0 5%;
 }
@@ -174,4 +177,38 @@ footer {
 }
 footer a{
   color: white;
+}
+/* media queries  */
+@media only screen and (min-width : 736px) {
+  /* Styles */
+  /* section info */
+  #info .wrapper > article{
+    width: 31%;
+    margin-right: 3.5%;
+    float: left;
+  }
+  #google-map{
+      width: 31%;
+    margin-right: 0;
+    float: left;
+    height: 100%;
+  }
+  /* section leistungen */
+  #leistungen .fa-ul{
+    column-count: 2;
+    column-gap: 50px;
+  }
+  /* section praxis */
+  #praxis .widget{
+   width: 31%;
+   margin-right: 3.5%;
+   float: left;
+ }
+  #praxis .widget:last-child{
+    
+    margin-right: 0;
+    /* width: 31%;
+
+    float: left; */
+  }
 }

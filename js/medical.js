@@ -61,7 +61,7 @@
   $(document).ready(function(){
     $(".container").click(function(){
 
-        $(".menu-haupt-container").slideToggle("slow");
+        $("#hauptmenu-resp").slideToggle("slow");
 
     });
   });

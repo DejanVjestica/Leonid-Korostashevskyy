@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <!-- Section-Willkommen -->
 <!-- ========== Banner - hier kommt: das Headerbild, und die Visitenkarte ============ -->
-<section id="banner" style="background-image: url(<?php echo get_background_image(); ?>);">
-  <div class="banner-msg">
+<section id="banner" class="" style="background-image: url(<?php echo get_background_image(); ?>);">
+  <div id="msg-container" class="wrapper">
     <?php dynamic_sidebar( 'header-msg'); ?>
   </div>
 </section>
@@ -24,29 +24,34 @@ Beiträge im kategorien 3 und Google map ist Hardcoded ================-->
   </div>
   <div class="clear"></div>
 </section>
+<!-- Section-Leistungen -->
+<section id="leistungen" class="">
+    <div class="wrapper">
+      <i class="fa fa-stethoscope fa-2x " aria-hidden="true"></i>
+      <h2 class="">Leistungen</h2>
+      <?php $my_postid = 17;//This is page id or post idd
+        $content_post = get_post($my_postid);
+        $content = $content_post->post_content;
+        $content = apply_filters('the_content', $content);
+        $content = str_replace(']]>', ']]&gt;', $content);
+        echo $content;
+      ?>
+    </div>
+
+</section>
 <!-- Wellcome massage  -->
 <section id="willkommen" class="wrapper">
     <h2 class="">Herzlich willkommen in unserer Praxis!​</h2>
     <?php dynamic_sidebar( 'willkommen'); ?>
 </section>
+
 <!-- Section-Our-team -->
 <section id="our-team" class="wrapper">
     <i class="fa fa-ambulance fa-2x" aria-hidden="true"></i>
     <h2 class="">Unser Team</h2>
     <?php dynamic_sidebar( 'our-team'); ?>
 </section>
-<!-- Section-Leistungen -->
-<section id="leistungen" class="wrapper">
-    <i class="fa fa-stethoscope fa-2x " aria-hidden="true"></i>
-    <h2 class="">Leistungen</h2>
-    <?php $my_postid = 17;//This is page id or post idd
-      $content_post = get_post($my_postid);
-      $content = $content_post->post_content;
-      $content = apply_filters('the_content', $content);
-      $content = str_replace(']]>', ']]&gt;', $content);
-      echo $content;
-    ?>
-</section>
+
 <!-- Section-Praxis -->
 <section id="praxis" class="wrapper">
     <i class="fa fa-hospital-o fa-2x " aria-hidden="true"></i>

@@ -113,3 +113,6 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more');
+
+// removes default gallery styles
+add_filter( 'use_default_gallery_style', '__return_false' );

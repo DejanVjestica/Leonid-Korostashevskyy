@@ -18,3 +18,15 @@
   </nav>
 </section>
 <?php endif; ?>
+
+
+<!-- <?php dynamic_sidebar( 'willkommen'); ?> -->
+
+
+<?php query_posts('cat=6'); ?>
+<?php if ( have_posts() ) : ?>
+  <?php while ( have_posts() ) : the_post(); ?>
+    <!-- Loop inhalt ist im templatepart "info" -->
+    <?php get_template_part( 'info' ); ?>
+  <?php endwhile; ?>
+<?php endif; ?>

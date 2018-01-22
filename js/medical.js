@@ -1,89 +1,64 @@
 // JavaScript Document
-
-// // jQuery
-// (function ($){
-//   $(document).ready(function(){
-//
-// /* WINDOW RESIZE ACTIONS */
-//
-//    	// $(window).resize(function(){
-// 		// 	// fullscreen();
-//     //
-// 		// });
-//
-// /* WINDOW LOAD ACTIONS */
-//
-//    	// $(window).load(function(){
-// 		// 	// fullscreen();
-// 		// });
-// //animated scrolling
-// 		$(".menu-item a[href^='#']").on('click', function(e) {
-//
-// // prevent default anchor click behavior
-// 			e.preventDefault();
-//
-// // store hash
-// 			var hash = this.hash;
-// // animate
-// 			  $('html, body').animate(
-//           {
-// 			   		scrollTop: $(hash).offset().top
-// 			   	},
-//           600,
-//           function(){
-// 			  		// when done, add hash to url
-// 			  		window.location.hash = hash;
-//
-// 			  	  history.pushState(null, null, hash);
-// 			    });
-// 		    });
-// // //fullsize sections
-// // 		function fullscreen (){
-// // 			$(".section").css({
-// // 				height: $(window).height()
-// // 			});
-// //     }
-// // Widgets elements order
-//         // $('.attachment-medium').insertBefore('.widgettitle');
-//
-// //Impressum
-// 		$("#menu-item-150 a").click(function(){
-// 			$(".impressum-content").fadeIn("medium");
-// 		});
-// 		$(".close-button").click(function(){
-// 			$(".impressum-content").fadeOut("medium");
-// 		});
-// 	}); // $(document).ready(function() ends here
-// }(jQuery));
-
-// jQuery
 (function ($){
   $(document).ready(function(){
+    /* WINDOW RESIZE ACTIONS */
+    $(window).resize(function(){
+      gallery_resize();
+    });
+    /* WINDOW LOAD ACTIONS */
+    $(window).load(function(){
+       gallery_resize();
+    });
+    // responcive menu
     $(".container").click(function(){
 
         $("#hauptmenu-resp").slideToggle("slow");
 
     });
-  });
-}(jQuery));
-// JavaScript
-function myFunction(x) {
-    x.classList.toggle("change");
-    // var nauptMenuResp = document.getElementById("hauptmenu-resp");
-    // var style =  nauptMenuResp.style.display = "none";
-    // nauptMenuResp.classList.toggle("display");
-};
-function image_gallery () {
-  var portrait = document.getElementByClassName("portrait");
-  var landscape = document.getElementByClassName("landscape");
 
-  var port_image = portrait.getElementsByTagName("img");
-  var land_image = portrait.style.width;
-  var land_image_width = land_image.style.width;
-  console.log("land_image");
-  window.alert(5 + 6);
+    //animated scrolling
+      var headerHeight = $("header").outerHeight();
+      // window.alert(headerHeight + " px");
+    $(".menu-item a[href^='#']").on('click', function() {
 
-};
-image_gallery();
-// window.alert(5 + 6);
-// // Image Gallery
+      // prevent default anchor click behavior
+      // e.preventDefault();
+
+      // store hash
+      var hash = this.hash;
+      // animate
+      $('html, body').animate(
+        {
+          scrollTop: $(hash).offset().top - headerHeight
+        },
+        600,
+        function(){
+          // when done, add hash to url
+          window.location.hash = hash;
+          history.pushState(null, null, hash);
+        });
+      });
+
+      // gallery portratit image menuHeight
+      function gallery_resize(){
+        function a(){};
+
+        var gallery_item_height = $(".landscape img").height();
+        $(".portrait img").height(gallery_item_height);
+        $(".landscape img").height(gallery_item_height);
+        var gallery_item_portrait_height = $(".portrait img").innerHeight();
+        // $(".portrait img").css({"height" : gallery_item_height + "px"});
+        // var crop_portrait_height =
+        // window.alert(gallery_item_height + " px");
+        console.log("gallery_item_portrait_height" + gallery_item_portrait_height + " px");
+        console.log("gallery_item_height= " + gallery_item_height + " px");
+      };
+
+    }); // $(document).ready(function() ends here
+  }(jQuery));
+  function myFunction(x) {
+      x.classList.toggle("change");
+      // var nauptMenuResp = document.getElementById("hauptmenu-resp");
+      // var style =  nauptMenuResp.style.display = "none";
+      // nauptMenuResp.classList.toggle("display");
+  };

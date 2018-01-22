@@ -57,15 +57,15 @@ function medical_praxis_widgets_init() {
 	        'after_title'   => '</h3>',
     ) );
     //   OUR TEAM------
-    register_sidebar( array(
-        'name' => __( 'our-team', 'theme-slug' ),
-        'id' => '-our-team',
-        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	      'after_widget'  => '</div>',
-	       'before_title'  => '<h3 class="widgettitle">',
-	        'after_title'   => '</h3>',
-    ) );
+    // register_sidebar( array(
+    //     'name' => __( 'our-team', 'theme-slug' ),
+    //     'id' => '-our-team',
+    //     'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
+    //     'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	  //     'after_widget'  => '</div>',
+	  //      'before_title'  => '<h3 class="widgettitle">',
+	  //       'after_title'   => '</h3>',
+    // ) );
     // //   LEISTUNGEN------
     // register_sidebar( array(
     //     'name' => __( 'leistungen', 'theme-slug' ),

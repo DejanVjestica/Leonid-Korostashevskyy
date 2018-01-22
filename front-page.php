@@ -65,11 +65,11 @@
  </section>
 
  <!-- Section-Our-team -->
- <section id="our-team" class="wrapper">
+ <!-- <section id="our-team" class="wrapper">
    <i class="fa fa-ambulance fa-2x" aria-hidden="true"></i>
    <h2 class="padd-top">Unser Team</h2>
    <?php dynamic_sidebar( 'our-team'); ?>
- </section>
+ </section> -->
 
  <!-- Section-Praxis -->
  <section id="praxis" class="wrapper">

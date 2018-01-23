@@ -24,11 +24,6 @@
       $('html, body').animate({
           scrollTop: $(hash).offset().top - headerHeight
         }, 600);
-        // function(){
-        //   // when done, add hash to url
-        //   window.location.hash = hash;
-        //   history.pushState(null, null, hash);
-        // });
       });
       // gallery portratit image menuHeight ====================================
       function gallery_resize(){
@@ -39,10 +34,8 @@
     }); // $(document).ready(function() ends here
   }(jQuery));
 
-  //=================================================
+  // JavaScript =================================================
   function myFunction(x) {
     x.classList.toggle("change");
-    // var nauptMenuResp = document.getElementById("hauptmenu-resp");
-    // var style =  nauptMenuResp.style.display = "none";
-    // nauptMenuResp.classList.toggle("display");
+
   };

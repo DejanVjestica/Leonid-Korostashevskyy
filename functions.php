@@ -1,17 +1,11 @@
 <?php
-
-// require get_template_directory() . '/inc/cleanup.php':
-
 function medical_praxis_script_enqueue() {
 
-  //wp_enqueue_style('customstyle', get_template_directory_uri() . '/scss/medical-praxis.css' , array(), '1.0.0', 'all');
-  wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/medical.css' , array(), '1.0.0', 'all');
-  wp_enqueue_style('960', get_template_directory_uri() . '/css/960.css' , array(), '1.0.0', 'all');
-  wp_enqueue_style('reset', get_template_directory_uri() . '/css/reset.css' , array(), 'all');
-  wp_enqueue_style('text', get_template_directory_uri() . '/css/text.css' , array(), '1.0.0', 'all');
+  wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/medical-praxis.css' , array(), '1.0.0', 'all');
+
   wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/font-awesome.min.css' , array(), '1.0.0', 'all');
 
-  wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.1.1.min.js');
+  wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js');
   wp_enqueue_script('customjs', get_template_directory_uri() . '/js/medical.js');
 }
 
@@ -37,7 +31,7 @@ function medical_praxis_widgets_init() {
         'name' => __( 'header-msg', 'theme-slug' ),
         'id' => 'header-msg',
         'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
-        'before_widget' => '<div id="%1$s" class="grid_8 widget %2$s">',
+        'before_widget' => '<div id="%1$s" class=widget %2$s">',
 	      'after_widget'  => '</div>',
 	       'before_title'  => '<h3 class="widgettitle">',
 	        'after_title'   => '</h3>',
@@ -47,7 +41,7 @@ function medical_praxis_widgets_init() {
         'name' => __( 'praxis', 'theme-slug' ),
         'id' => 'praxis',
         'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
-        'before_widget' => '<div id="%1$s" class="grid_4 widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	      'after_widget'  => '</div>',
 	       'before_title'  => '<h3 class="widgettitle">',
 	        'after_title'   => '</h3>',
@@ -63,15 +57,15 @@ function medical_praxis_widgets_init() {
 	        'after_title'   => '</h3>',
     ) );
     //   OUR TEAM------
-    register_sidebar( array(
-        'name' => __( 'our-team', 'theme-slug' ),
-        'id' => '-our-team',
-        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
-        'before_widget' => '<div id="%1$s" class=" grid_4 widget %2$s">',
-	      'after_widget'  => '</div>',
-	       'before_title'  => '<h3 class="widgettitle">',
-	        'after_title'   => '</h3>',
-    ) );
+    // register_sidebar( array(
+    //     'name' => __( 'our-team', 'theme-slug' ),
+    //     'id' => '-our-team',
+    //     'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
+    //     'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	  //     'after_widget'  => '</div>',
+	  //      'before_title'  => '<h3 class="widgettitle">',
+	  //       'after_title'   => '</h3>',
+    // ) );
     // //   LEISTUNGEN------
     // register_sidebar( array(
     //     'name' => __( 'leistungen', 'theme-slug' ),
@@ -119,3 +113,6 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more');
+
+// removes default gallery styles
+add_filter( 'use_default_gallery_style', '__return_false' );

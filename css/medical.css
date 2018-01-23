@@ -7,6 +7,12 @@
 .fa-check-square{
   font-size: 100%;
 }
+#our-team .fa{
+  margin-bottom: 10px;
+}
+#praxis .widget{
+  margin-top: 10px;
+}
 /* ----------------Algemeine classe-------------------- */
 body{
   text-align: left;
@@ -213,6 +219,8 @@ Section Unser-Team
 }
 #our-team img{
     margin-bottom: 10px;
+    width: 100%;
+    height: auto;
 }
 
 /* ==========================================

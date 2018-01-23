@@ -173,7 +173,11 @@ header a{
 #info {
   background-color:  #029cac;
   color: white;
+<<<<<<< HEAD
   padding: 5% 0;
+=======
+  padding: 2em 0;
+>>>>>>> development
 }
 #info .widget-box{
   margin-bottom: 2em;
@@ -184,6 +188,12 @@ header a{
 #google-map{
   width: 100%;
 }
+<<<<<<< HEAD
+=======
+#google-map iframe{
+  height: 200px;
+}
+>>>>>>> development
 .attachment-medium{
   width: 100%;
   height: auto;
@@ -282,6 +292,7 @@ footer a{
   margin: auto;
 }
 #gallery-1 .gallery-item{
+<<<<<<< HEAD
   /* float: left; */
   width: 100%;
   margin: 0 0 0.8em 0;
@@ -338,3 +349,38 @@ footer a{
     object-fit: none;
   }
 }
+=======
+  margin: 0 0 0.6em 0;
+}
+#gallery-1 img{
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+#gallery-1 .portrait img{
+  object-fit: cover;
+}
+#gallery-1 br{
+   display: none;
+}
+@media only screen and (min-width : 500px){
+  #gallery-1 .gallery-item{
+    float: left;
+    width: 47%;
+    margin-right: 0.8em;
+  }
+}
+@media only screen and (min-width : 736px){}
+@media only screen and (min-width : 1024px){
+  #gallery-1 .gallery-item{
+    float: left;
+    width: 32%;
+    margin-right: 0.8em;
+  }
+}
+
+/* Singlepage */
+#single-page{
+  margin-top: 120px;
+}
+>>>>>>> development

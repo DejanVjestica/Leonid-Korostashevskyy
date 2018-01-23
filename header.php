@@ -25,15 +25,21 @@
           <div class="bar2"></div>
           <div class="bar3"></div>
         </div>
+
         <!-- es wird nun zeigen wann <700px -->
         <nav id="hauptmenu" class="">
           <?php wp_nav_menu(array('theme_location'=>'haupt')); ?>
         </nav>
         <div class="clear"></div>
       <?php endif; ?>
+      <!-- link to Home page -->
+      <a id="logo" class="" href="<?php bloginfo('url'); ?>">
+        <h2>Leonid Korostashevskyy</h2>
+      </a>
     </article>
     <!-- es wird nun zeigen wann >700px -->
     <nav id="hauptmenu-resp" class="">
       <?php wp_nav_menu(array('theme_location'=>'haupt')); ?>
     </nav>
+
   </header>

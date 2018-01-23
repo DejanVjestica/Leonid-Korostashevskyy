@@ -5,7 +5,7 @@ function medical_praxis_script_enqueue() {
 
   wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/font-awesome.min.css' , array(), '1.0.0', 'all');
 
-  wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.1.1.min.js');
+  wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js');
   wp_enqueue_script('customjs', get_template_directory_uri() . '/js/medical.js');
 }
 
